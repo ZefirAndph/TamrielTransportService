@@ -1,0 +1,10 @@
+[
+	"LODĚ",
+	{"from":{"poi":"Wayrest", "dep":"Přístav"},	"to":{"poi":"Sentinel",	"dep":"Výstupní molo"}, 	"typ":"plavba", "provozovatel":"", "popis":""},
+	{"from":{"poi":"Wayrest", "dep":"Přístav"},	"to":{"poi":"Alinor",	"dep":"Molo u divadla"}, 	"typ":"plavba", "provozovatel":"", "popis":""},
+	{"from":{"poi":"Sentinel","dep":"Přístav"}, "to":{"poi":"Evermoore", "dep":"Přístav"}, 			"typ":"plavba", "provozovatel":"", "popis":""},
+
+	"PORTÁLY",
+	{"from":{"poi":"Leyawiin", "dep":"Za kostelem"}, "to":{"poi":"Fargrave","dep":"Plaza of Portals"}, "typ":"portal", "provozovatel":"Fargrave", "popis":""},
+	""
+]

@@ -1,0 +1,138 @@
+digraph TamrielTransportService
+{
+	//J [label="Jo'akh"]
+	node [shape="round"]
+	//subgraph [style="filled", color="#000000cc"]
+	layout="fdp"
+	edge [splines=splines]	
+	node [shape=box]
+	subgraph cluster_Summerset {
+		style=filled;
+		color=lightgrey;
+		
+		node [style=filled,color=white];
+		label = "Letní ostrovy";
+		VukhelGuard [label="Vukhel Guard"]
+		Skyvatch [label="Skywatch"]
+		Alinor [label="Alinor"]
+	}
+	subgraph cluster_Morrowind {
+		node [style=filled,color=white];
+		label = "Morrowind";
+
+		subgraph cluster_Vvanderfell {
+			node [style=filled,color=white];
+			label = "Vvanderfell";
+			SeydaNeen [label="Seyda Neen"]
+			Vivec [label="Vivec"]
+			Balmora [label="Balmora"]
+			Gnisis [label="Gnisis"]
+			TelMora [label="Tel Mora"]
+			SadrithMora [label="Sadrith Mora"]
+			MolagMar [label="Molag Mar"]
+			Suran [label="Suran"]
+		}
+		
+		Mournhold [label="Mournhold"]
+	}
+	subgraph cluster_HighRock {
+		node [style=filled,color=white];
+		label = "Vysokoskalí";
+		Daggerfall [label="Daggerfall"]
+		Wayrest [label="Wayrest"]
+		StrosMkai [label="Stros M'kai"]
+		Evermoore [label="Evermoore"]
+		SheiHrad [label="Sheizihrův hrad"]
+	}
+	subgraph cluster_GoldCoast {
+		shape="circle"
+		style=filled;
+		color=lightgrey;
+		node [style=filled,color=white];
+		label = "Cyrodiil";
+		Anvil [label="Anvil"]
+		Kvatch [label="Kvatch"]
+		Leyawiin [label="Leyawiin"]
+	}
+	subgraph cluster_Skyrim {
+		style=filled;
+		color=lightgrey;
+		node [style=filled,color=white];
+		label = "Skyrim";
+		Windhelm [label="Windhelm"]
+		Riften [label="Riften"]
+		Samota [label="Samota"]
+		Markarth [label="Markarth"]
+		Morthal [label="Morthal"]
+	}
+	subgraph cluster_Hammerfell {
+		style=filled;
+		color=lightgrey;
+		node [style=filled,color=white];
+		label = "Hammerfell";
+		Belkarth [label="Belkarth"]
+		Sentinel [label="Sentinel"]
+		HalinsStand [label="Halin's Stand"]
+		AbahsLanding [label="Abah's Landing"]
+	}
+
+	subgraph cluster_Valenwood	{
+		style="filled"
+		color=lightgrey
+		node [style=filled, color=white]
+		label="Valenwood"
+		EldenRoot [label="Elden Root C"]
+		subgraph cluster_Vulkwasten {
+			style=filled;color="#00ee00"
+			node [style=filled, color=green, shape=round]
+			label="Vulkwasten"
+			Vulkwasten_dostav [label="Dostavník"]
+		}
+	}
+
+	edge [color="#0077ff"] // Lode
+	Alinor -> EldenRoot
+	Alinor -> Wayrest
+	Alinor -> Mournhold
+	
+	Daggerfall -> SeydaNeen
+	Daggerfall -> StrosMkai
+	Daggerfall -> VukhelGuard
+	Daggerfall -> Anvil
+
+	Wayrest -> AbahsLanding -> done
+	Wayrest -> Sentinel -> done
+	Wayrest -> Vivec -> done
+	Wayrest -> Alinor -> done
+	Wayrest -> EldenRoot -> done
+	Wayrest -> Shornhelm -> done
+	Wayrest -> Glenumbra___a -> done
+	Wayrest -> Leyawiin -> done
+	Wayrest -> GonfalonBay -> done
+	Wayrest -> Samota -> done
+
+	Sentinel -> Wayrest -> done
+	Sentinel -> Shornhelm -> done
+	Sentinel -> Evermoore -> done
+	Sentinel -> Windhelm -> done
+	Sentinel -> Vulkwasten_dostav  -> done
+	
+	Sentinel -> Alinor -> done
+	Sentinel -> Vivec -> done
+	Sentinel -> SeydaNeen -> done
+	
+	
+
+	edge [color="green"] // Carts
+	Evermoore -> Riften
+	Windhelm -> Riften
+	Wayrest -> Rimmen
+	edge [color="black"] // Pěškobus
+	SheiHrad -> Daggerfall
+
+	edge [color="orange"] // Blátošlapka
+	SeydaNeen -> Vivec
+	Vivec -> Balmora
+	Vivec -> TelMora
+
+}
